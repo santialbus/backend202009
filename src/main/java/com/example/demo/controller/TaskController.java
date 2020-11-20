@@ -43,7 +43,7 @@ public class TaskController {
 	    return new ResponseEntity<TaskDto>(taskDto, HttpStatus.OK);
 	}
 	
-	@RequestMapping(value = {"/task/{task}"}, method = RequestMethod.POST)
+	@RequestMapping(value = {"/task"}, method = RequestMethod.POST)
 	public ResponseEntity<TaskDto> insertarTask(
 			@RequestBody TaskDto task) {
 		boolean bien = taskService.createTask(task);
@@ -54,7 +54,7 @@ public class TaskController {
 	    return new ResponseEntity<TaskDto>(task, HttpStatus.CREATED);
 	}
 	
-	@RequestMapping(value = {"/task/{task}"}, method = RequestMethod.PUT)
+	@RequestMapping(value = {"/task"}, method = RequestMethod.PUT)
 	public ResponseEntity<TaskDto> updateTask(
 			@RequestBody TaskDto task) {
 		boolean bien = taskService.createTask(task);
